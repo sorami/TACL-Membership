@@ -30,7 +30,7 @@ alice
     └── original
 ```
 
-For `bob/`, we have `all/` for the entire data Bob gets that he can use for whatever way he wants for his attacks. We also have 10 subdirectories `shadow_{1..5}{a,b}/`, and similar to Alice each subdirectory contains `in_probe/`, `out_probe/`, and `ood` that includes both `original/` and `mt/`.
+For `bob/`, we have `all/` for the entire data Bob gets that he can use for whatever way he wants for his attacks. We also have 10 subdirectories `shadow_{1..5}{a,b}/` from the "shadow models" we used for the attacks in our experiments. Similar to Alice each shadow model subdirectory contains `in_probe/`, `out_probe/`, and `ood` that includes both `original/` and `mt/`.
 
 ```
 bob
