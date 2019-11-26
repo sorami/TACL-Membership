@@ -7,7 +7,65 @@ Sorami Hisamoto, Matt Post, Kevin Duh
 <img src="figures/alice_and_bob.png" width="600px">
 
 
-## Data
+## Data - Directory Structure
+
+We have two main directories, `alice/` and `bob/`, for Alice and Bob.
+
+For `alice/`, we have three subdirectories, for **in probes** (`in_probe/`), **out probes** (`out_probe/`), and **out-of-domain probes** (`ood/`). In each subdirectories, there are `original/` for the original corpus data, and `mt/` which contains the translation text file (`*.de-en.en`) and the MT model score file (`*.de-en.score.en`) from the Alice MT model.
+
+```
+alice
+├── in_probe
+│   ├── mt
+│   └── original
+├── ood
+│   ├── mt
+│   └── original
+└── out_probe
+    ├── mt
+    └── original
+```
+
+For `bob/`, we have `all/` for the entire data Bob gets that he can use for whatever way he wants for his attacks. We also have 10 subdirectories `shadow_{1..5}{a,b}/`, and similar to Alice each subdirectory contains `in_probe/`, `out_probe/`, and `ood` that includes both `original/` and `mt/`.
+
+```
+bob
+├── all
+├── shadow_1a
+│   ├── in_probe
+│   │   ├── mt
+│   │   └── original
+│   ├── ood
+│   │   ├── mt
+│   │   └── original
+│   └── out_probe
+│       ├── mt
+│       └── original
+├── shadow_1b
+│   ├── in_probe
+...
+```
+
+Each terminal subdirectories contain text files for translation. The file name indicates the subcorpus, pre-process state, and the language.
+
+For example, `commoncrawl.de-en.bpe.de` is a CommonCrawl (`commoncrawl.de-en`) BPE-ed (`.bpe`) German (`.de`) data. 
+
+- Subcorpus
+  - `paracrawl.filtered`
+  - `commoncrawl.de-en`
+  - `europarl-v7.de-en`
+  - `news-commentary-v13.de-en`
+  - `rapid2016.de-en`
+- Pre-process State
+  - None: original raw
+  - `.tok`: Tokenized
+  - `.bpe`: BPE
+- Langauge
+  - `de`: German (source)
+  - `en`: English (target)
+  
+
+## Detail of Data
 
 ## Corpus
 
