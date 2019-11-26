@@ -1,13 +1,17 @@
 # Membership Inference Attacks on Sequence-to-Sequence Models
 
+Public data from the paper "*Membership Inference Attacks on Sequence-to-Sequence Models*" (Sorami Hisamoto, Matt Post, Kevin Duh, 2019).
+
 https://arxiv.org/abs/1904.05506
 
-Sorami Hisamoto, Matt Post, Kevin Duh
+
 
 <img src="figures/alice_and_bob.png" width="600px">
 
 
-## Data - Directory Structure
+## Data
+
+### Directory
 
 We have two main directories, `alice/` and `bob/`, for Alice and Bob.
 
@@ -46,6 +50,8 @@ bob
 ...
 ```
 
+### File name
+
 Each terminal subdirectories contain text files for translation. The file name indicates the subcorpus, pre-process state, and the language.
 
 For example, `commoncrawl.de-en.bpe.de` is a CommonCrawl (`commoncrawl.de-en`) BPE-ed (`.bpe`) German (`.de`) data. 
@@ -65,7 +71,7 @@ For example, `commoncrawl.de-en.bpe.de` is a CommonCrawl (`commoncrawl.de-en`) B
   - `en`: English (target)
   
 
-## Detail of Data
+## Detail of Data Splits
 
 ## Corpus
 
