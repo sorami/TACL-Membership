@@ -72,9 +72,10 @@ For example, `commoncrawl.de-en.bpe.de` is a CommonCrawl (`commoncrawl.de-en`) B
   - None: Original raw
   - `.tok`: Tokenized
   - `.bpe`: BPE
-- Langauge
+- Language
   - `de`: German (source)
   - `en`: English (target)
+  - `score.en`: MT model score
   
 
 ## Detail of Data Splits
