@@ -69,7 +69,7 @@ For example, `commoncrawl.de-en.bpe.de` is a CommonCrawl (`commoncrawl.de-en`) B
     - `subtitles18.de-en`
     - `ted.de-en`
 - Pre-process State
-  - None: original raw
+  - None: Original raw
   - `.tok`: Tokenized
   - `.bpe`: BPE
 - Langauge
