@@ -57,11 +57,17 @@ Each terminal subdirectories contain text files for translation. The file name i
 For example, `commoncrawl.de-en.bpe.de` is a CommonCrawl (`commoncrawl.de-en`) BPE-ed (`.bpe`) German (`.de`) data. 
 
 - Subcorpus
-  - `paracrawl.filtered`
-  - `commoncrawl.de-en`
-  - `europarl-v7.de-en`
-  - `news-commentary-v13.de-en`
-  - `rapid2016.de-en`
+  - Main Subcorpora
+    - `paracrawl.filtered`
+    - `commoncrawl.de-en`
+    - `europarl-v7.de-en`
+    - `news-commentary-v13.de-en`
+    - `rapid2016.de-en`
+  - Out-of-Domain Subcorpora
+    - `emea.de-en`
+    - `koran.de-en`
+    - `subtitles18.de-en`
+    - `ted.de-en`
 - Pre-process State
   - None: original raw
   - `.tok`: Tokenized
