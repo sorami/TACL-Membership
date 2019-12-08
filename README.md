@@ -15,38 +15,42 @@ https://arxiv.org/abs/1904.05506
 
 We have two main directories, `alice/` and `bob/`, for Alice and Bob.
 
-For `alice/`, we have three subdirectories, for **in probes** (`in_probe/`), **out probes** (`out_probe/`), and **out-of-domain probes** (`ood/`). In each subdirectories, there are `original/` for the original corpus data, and `mt/` which contains the translation text file (`*.de-en.en`) and the MT model score file (`*.de-en.score.en`) from the Alice MT model.
+For `alice/`, we have four subdirectories, MT model training data (`train/`), **in probes** (`in_probe/`), **out probes** (`out_probe/`), and **out-of-domain probes** (`ood/`). In each probe subdirectories, there are `original/` for the original corpus data, and `mt/` which contains the translation text file (`*.de-en.en`) and the MT model score file (`*.de-en.score.en`) from the Alice MT model.
 
 ```
 alice
-├── in_probe
-│   ├── mt
-│   └── original
-├── ood
-│   ├── mt
-│   └── original
-└── out_probe
-    ├── mt
-    └── original
+|-- in_probe
+|   |-- mt
+|   `-- original
+|-- ood
+|   |-- mt
+|   `-- original
+|-- out_probe
+|   |-- mt
+|   `-- original
+`-- train
 ```
 
-For `bob/`, we have `all/` for the entire data Bob gets that he can use for whatever way he wants for his attacks. We also have 10 subdirectories `shadow_{1..5}{a,b}/` from the "shadow models" we used for the attacks in our experiments. Similar to Alice each shadow model subdirectory contains `in_probe/`, `out_probe/`, and `ood` that includes both `original/` and `mt/`.
+For `bob/`, we have `all/` for the entire data Bob gets that he can use for whatever way he wants for his attacks. We also have 10 subdirectories `shadow_{1..5}{a,b}/` from the "shadow models" we used for the attacks in our experiments. Similar to Alice each shadow model subdirectory contains `train`, `in_probe/`, `out_probe/`, and `ood`, and each probe subdirectories contain both `original/` and `mt/`.
 
 ```
 bob
-├── all
-├── shadow_1a
-│   ├── in_probe
-│   │   ├── mt
-│   │   └── original
-│   ├── ood
-│   │   ├── mt
-│   │   └── original
-│   └── out_probe
-│       ├── mt
-│       └── original
-├── shadow_1b
-│   ├── in_probe
+|-- all
+|-- shadow_1a
+|   |-- in_probe
+|   |   |-- mt
+|   |   `-- original
+|   |-- ood
+|   |   |-- mt
+|   |   `-- original
+|   |-- out_probe
+|   |   |-- mt
+|   |   `-- original
+|   `-- train
+|-- shadow_1b
+|   |-- in_probe
+|   |   |-- mt
+|   |   `-- original
 ...
 ```
 
@@ -54,7 +58,7 @@ bob
 
 Each terminal subdirectories contain text files for translation. The file name indicates the subcorpus, pre-process state, and the language.
 
-For example, `commoncrawl.de-en.bpe.de` is a CommonCrawl (`commoncrawl.de-en`) BPE-ed (`.bpe`) German (`.de`) data. 
+For example, `commoncrawl.de-en.tok.de` is a CommonCrawl (`commoncrawl.de-en`) tokenized (`.tok`) German (`.de`) data. 
 
 - Subcorpus
   - Main Subcorpora
@@ -69,9 +73,7 @@ For example, `commoncrawl.de-en.bpe.de` is a CommonCrawl (`commoncrawl.de-en`) B
     - `subtitles18.de-en`
     - `ted.de-en`
 - Pre-process State
-  - None: Original raw
   - `.tok`: Tokenized
-  - `.bpe`: BPE
 - Language
   - `de`: German (source)
   - `en`: English (target)
