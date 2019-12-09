@@ -56,7 +56,7 @@ bob
 
 ### File name
 
-Each terminal subdirectories contain text files for translation. The file name indicates the subcorpus, pre-process state, and the language.
+Each terminal subdirectories contain text files (and MT model score files if applicable). The file name indicates the subcorpus, file type, and the language.
 
 For example, `commoncrawl.de-en.tok.de` is a CommonCrawl (`commoncrawl.de-en`) tokenized (`.tok`) German (`.de`) data. 
 
@@ -72,13 +72,15 @@ For example, `commoncrawl.de-en.tok.de` is a CommonCrawl (`commoncrawl.de-en`) t
     - `koran.de-en`
     - `subtitles18.de-en`
     - `ted.de-en`
-- Pre-process State
-  - `.tok`: Tokenized
+- File Type
+  - `.tok`: Tokenized text
+  - `.score`: MT model score
 - Language
   - `de`: German (source)
   - `en`: English (target)
-  - `score.en`: MT model score
   
+All text are tokenized. We used the same tokenziation for both Alice and Bob.
+
 
 ## Detail of Data Splits
 
