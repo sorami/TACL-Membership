@@ -11,6 +11,8 @@ Public data from the paper "*Membership Inference Attacks on Sequence-to-Sequenc
 
 ## Data
 
+You can download the data from the following URL: http://www.cs.jhu.edu/~kevinduh/a/tacl-membership.tar.gz
+
 ### Directory
 
 We have two main directories, `alice/` and `bob/`, for Alice and Bob.
