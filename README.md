@@ -1,8 +1,8 @@
 # Membership Inference Attacks on Sequence-to-Sequence Models
 
-Public data from the paper "*Membership Inference Attacks on Sequence-to-Sequence Models*" (Sorami Hisamoto, Matt Post, Kevin Duh).
+Public data from the paper "*Membership Inference Attacks on Sequence-to-Sequence Models: Is My Data In Your Machine Translation System?*" (Sorami Hisamoto, Matt Post, and Kevin Duh. TACL 2020).
 
-- Paper: https://arxiv.org/abs/1904.05506
+- Paper: https://www.mitpressjournals.org/doi/full/10.1162/tacl_a_00299
 - Data Documentation: https://github.com/sorami/tacl-membership (The latest edition of this README)
 
 
